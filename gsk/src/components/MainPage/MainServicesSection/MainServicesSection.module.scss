@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Ro';
+    src: url('/fonts/russo_one/Russo_One/RussoOne-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.globalContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20%;
+    position: relative;
+    padding: 80px 60px;
+    overflow-y: hidden;
+    background-color: #E4E5EA;
+
+    .leftSide {
+
+        img {
+            position: absolute;
+            left: -15%;
+            width: 800px;
+            height: 800px;
+        }
+
+    }
+
+    .rightSide {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 80px;
+        position: relative;
+
+        .serviceBlock {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 100px;
+            position: relative;
+            padding-right: 100px;
+
+            .arrow {
+                position: absolute;
+                right: 20px;
+                bottom: 0;
+                width: 32px;
+                height: 32px;
+                padding: 4px;
+                cursor: pointer;
+                background-color: #F4F5FA;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background-color: rgb(208, 208, 208);
+                }
+            }
+        }
+        
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #0C151C99;
+        }
+
+        &::after {
+            content: '';
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            background-color: #6B99C3;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::before {
+            content: '';
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            background-color: #6B99C3;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .smallSquareTop, .smallSquareBottom, .smallSquareCenter, 
+        .smallSquareLeft, .smallSquareRight {
+            width: 10px;
+            height: 10px;
+            background-color: #6B99C3;
+            position: absolute;
+        }
+
+        .smallSquareTop, .smallSquareBottom, .smallSquareCenter {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .smallSquareLeft, .smallSquareRight {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .smallSquareTop {
+            top: 0;
+        }
+
+        .smallSquareCenter {
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .smallSquareBottom {
+            bottom: 0;
+        }
+
+        .smallSquareLeft {
+            left: 0;
+        }
+
+        .smallSquareRight {
+            right: 0;
+        }
+    }
+}

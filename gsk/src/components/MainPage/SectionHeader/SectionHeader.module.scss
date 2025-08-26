@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Ro';
+    src: url('/fonts/russo_one/Russo_One/RussoOne-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .square {
+        width: 16px;
+        height: 16px;
+        background-color: #16354D;
+        border: 1px solid black;
+    }
+
+    h3 {
+        font-family: 'Ro', sans-serif;
+        font-size: 20px;
+        color: #16354D;
+        white-space: nowrap;
+    }
+}

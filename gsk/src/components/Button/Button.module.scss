@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Ro';
+    src: url('/fonts/russo_one/Russo_One/RussoOne-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.button {
+    all: unset;
+    cursor: pointer;
+    background-color: #0C151C;
+    color: #E4E5EA;
+    width: fit-content;
+    transition: all 0.2s ease;
+    font-family: 'Ro', sans-serif;
+    font-size: 22px;
+
+    &:hover {
+        background-color: rgb(65, 65, 65);
+    }
+}

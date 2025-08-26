@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'inter';
+    src: url('/fonts/inter/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Ro';
+    src: url('/fonts/russo_one/Russo_One/RussoOne-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.stepContainer {
+    padding: 24px;
+    border: 2px solid #6B99C399;
+    position: relative;
+    width: calc((100% - 16px * 3) / 4);
+
+    .number {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        font-family: 'Ro', sans-serif;
+        font-size: 22px;
+        color: #16354D;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .square {
+        width: 10px;
+        height: 10px;
+        background-color: #6b99c3;
+        position: absolute;
+
+        &:first-child, &:nth-child(2) {
+            top: 0;
+        }
+
+        &:nth-child(4), &:nth-child(3) {
+            bottom: 0;
+        }
+
+        &:first-child, &:nth-child(3) {
+            left: 0;
+            
+        }
+
+        &:nth-child(2), &:nth-child(4) {
+            right: 0;
+        }
+
+        &:first-child {
+            transform: translate(-50%, -50%);
+        }
+
+        &:nth-child(2) {
+            transform: translate(50%, -50%);
+        }
+
+        &:nth-child(3) {
+            transform: translate(-50%, 50%);
+        }
+
+        &:nth-child(4) {
+            transform: translate(50%, 50%);
+        }
+    }
+
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        background-color: #6B99C3;
+        top: 24px;
+        right: 24px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        h3 {
+            color: #16354D;
+            font-family: 'Ro', sans-serif;
+            font-size: 20px;
+        }
+
+        .description {
+            font-family: 'inter', sans-serif;
+            font-size: 16px;
+            color: #0C151C99;
+        }
+    }
+}
